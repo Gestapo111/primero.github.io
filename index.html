@@ -3,72 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuestionario de Ciencias Naturales y Física</title>
+    <title>Cuestionario de Física y Química</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
         .container {
             width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 2em;
-            text-transform: uppercase;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        form {
-            background: #fff;
+            margin: 0 auto;
             padding: 20px;
-            margin: 20px 0;
+            background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
+        h1 {
+            text-align: center;
             color: #333;
         }
         .question {
-            margin: 10px 0;
+            margin-bottom: 15px;
         }
-        .question label {
+        label {
             display: block;
-            margin-bottom: 5px;
+            font-weight: bold;
         }
-        .question input {
+        input[type="radio"] {
             margin-right: 10px;
         }
-        .submit-btn {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 10px;
-            font-size: 1.2em;
-            background: #333;
-            color: #fff;
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
             border: none;
-            border-radius: 5px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
             cursor: pointer;
-            transition: background 0.3s;
-        }
-        .submit-btn:hover {
-            background: #555;
+            border-radius: 5px;
         }
         .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
             text-align: center;
-            font-size: 1.5em;
-            margin: 20px;
         }
     </style>
-</head>
+    <script>
+        function calcularNota() {
+            const respuestasCorrectas = {
+                "q1": "a", "q2": "a", "q3": "a", "q4": "a", "q5": "a",
+                "q6": "a", "q7": "a", "q8": "a", "q9": "a", "q10": "a",
+                "q11": "a", "q12": "a", "q13": "a", "q14": "a", "q15": "a",
+                "q16": "a", "q17": "a", "q18": "a", "q19": "a", "q20": "a",
+                "q21": "a", "q22": "a", "q23": "a", "q24": "a", "q25": "a",
+                "q26": "a", "q27": "a", "q28": "a", "q29": "a", "q30": "a",
+                "q31": "a", "q32": "a", "q33": "a", "q34": "a", "q35": "a",
+                "q36": "a", "q37": "a", "q38": "a", "q39": "a", "q40": "a"
+            };
+
+            let puntos = 0;
+            for (let i = 1; i <= 40; i++) {
+                const pregunta = document.querySelector(`input[name="q${i}"]:checked`);
+                if (pregunta && pregunta.value === respuestasCorrectas[`q${i}`]) {
+                    puntos += 0.25;
+                }
+            }
+            const nota = (puntos / 10) * 100;
+            document.getElementById('resultado').innerText = `Tu nota es: ${nota.toFixed(2)}%`;
+        }
+    </script>
 <body>
     <header>
         Cuestionario de Ciencias Naturales y Física
@@ -369,69 +377,10 @@
                 <input type="radio" name="q40" value="b"> b) La energía de un sistema se mantiene constante.<br>
                 <input type="radio" name="q40" value="c"> c) La energía total en un sistema cerrado siempre aumenta.<br>
                 <input type="radio" name="q40" value="d"> d) La energía se puede crear a partir de la nada.<br>
-            </div>
+          </div>
+            <input type="submit" value="Obtener Nota">
+            <div id="resultado" class="result"></div>
         </form>
     </div>
-
-    <script>
-        function calificarCuestionario() {
-            // Respuestas correctas
-            var respuestasCorrectas = {
-                "q1": "a",
-                "q2": "c",
-                "q3": "b",
-                "q4": "a",
-                "q5": "a",
-                "q6": "a",
-                "q7": "a",
-                "q8": "b",
-                "q9": "b",
-                "q10": "c",
-                "q11": "a",
-                "q12": "c",
-                "q13": "a",
-                "q14": "a",
-                "q15": "a",
-                "q16": "a",
-                "q17": "a",
-                "q18": "a",
-                "q19": "a",
-                "q20": "a",
-                "q21": "a",
-                "q22": "a",
-                "q23": "a",
-                "q24": "a",
-                "q25": "a",
-                "q26": "a",
-                "q27": "a",
-                "q28": "a",
-                "q29": "a",
-                "q30": "a",
-                "q31": "a",
-                "q32": "a",
-                "q33": "a",
-                "q34": "a",
-                "q35": "a",
-                "q36": "a",
-                "q37": "a",
-                "q38": "a",
-                "q39": "a",
-                "q40": "a"
-            };
-
-            var totalPuntos = 0;
-            var numeroPreguntas = 40;
-
-            for (var i = 1; i <= numeroPreguntas; i++) {
-                var pregunta = document.querySelector('input[name="q' + i + '"]:checked');
-                if (pregunta && pregunta.value === respuestasCorrectas["q" + i]) {
-                    totalPuntos += 0.5; // Cada respuesta correcta vale 0.5 puntos
-                }
-            }
-
-            // Mostrar la nota
-            alert("Tu puntuación es: " + totalPuntos + " de " + (numeroPreguntas * 0.5));
-        }
-    </script>
 </body>
 </html>

@@ -444,8 +444,46 @@
         </div>
     </div>
 
-    <script>
+   <script>
+        const maxAttempts = 3;
+        const attemptCounts = {};
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function setupQuiz(formId) {
+            const form = document.getElementById(formId);
+            const questions = Array.from(form.querySelectorAll('.question'));
+            const shuffledQuestions = shuffleArray(questions.slice());
+
+            shuffledQuestions.forEach((question, index) => {
+                form.appendChild(question);
+            });
+        }
+
+        function checkAttempts(formId) {
+            if (!attemptCounts[formId]) {
+                attemptCounts[formId] = 0;
+            }
+
+            if (attemptCounts[formId] >= maxAttempts) {
+                document.getElementById(`attempt-info-${formId}`).innerText = 'Has alcanzado el límite de intentos.';
+                return false;
+            }
+
+            return true;
+        }
+
         function calcularNota(formId, totalPreguntas) {
+            if (!checkAttempts(formId)) return;
+
+            attemptCounts[formId] = (attemptCounts[formId] || 0) + 1;
+
             const form = document.getElementById(formId);
             const respuestas = form.querySelectorAll('input[type="radio"]:checked');
             const correctas = {
@@ -458,7 +496,6 @@
             };
 
             let score = 0;
-            let respuestasUsuario = Array(totalPreguntas).fill(null);
 
             respuestas.forEach(respuesta => {
                 const nombrePregunta = respuesta.name;
@@ -468,12 +505,22 @@
                 if (correctas[formId][preguntaIndex] === respuestaUsuario) {
                     score += 0.5;
                 }
-                respuestasUsuario[preguntaIndex] = respuestaUsuario;
             });
 
             const resultadoDiv = document.getElementById(`result-${formId}`);
             resultadoDiv.innerHTML = `Nota: ${score.toFixed(1)} / ${totalPreguntas * 0.5}`;
+            const attemptInfoDiv = document.getElementById(`attempt-info-${formId}`);
+            attemptInfoDiv.innerText = `Intentos restantes: ${maxAttempts - attemptCounts[formId]}`;
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setupQuiz('form-fisica-movimiento');
+            setupQuiz('form-fisica-estatica-dinamica');
+            setupQuiz('form-fisica-termodinamica');
+            setupQuiz('form-geologia-historia-tierra');
+            setupQuiz('form-quimica-teoria-atomica');
+            setupQuiz('form-quimica-soluciones');
+        });
     </script>
 </body>
 </html>

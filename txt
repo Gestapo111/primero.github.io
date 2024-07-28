@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Física y Química</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Fondo negro para la página */
+            color: #fff; /* Texto blanco para contraste */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #222; /* Fondo gris oscuro para el contenedor */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el contenedor */
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50; /* Color verde para el encabezado */
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #444; /* Borde gris oscuro para cada pregunta */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Efecto de sombra para cada pregunta */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave para los efectos */
+        }
+        .question:hover {
+            background-color: #333; /* Cambio de fondo al pasar el ratón */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Aumentar sombra al pasar el ratón */
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .not-answered {
+            color: grey;
+        }
+    </style>
+    <script>
+        function calculateScore() {
+            const answers = {
+                q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a',
+                q6: 'a', q7: 'a', q8: 'a', q9: 'a', q10: 'a',
+                q11: 'a', q12: 'a', q13: 'a', q14: 'a', q15: 'a',
+                q16: 'a', q17: 'a', q18: 'a', q19: 'a', q20: 'a',
+                q21: 'a', q22: 'a', q23: 'a', q24: 'a', q25: 'a',
+                q26: 'a', q27: 'a', q28: 'a', q29: 'a', q30: 'a',
+                q31: 'a', q32: 'a', q33: 'a', q34: 'a', q35: 'a',
+                q36: 'a', q37: 'a', q38: 'a', q39: 'a', q40: 'a'
+            };
 
+            let score = 0;
+            const totalQuestions = 40;
+            const pointsPerQuestion = 0.25;
+            let resultOutput = '';
+            const form = document.getElementById('quizForm');
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionId = `q${i}`;
+                const selectedAnswer = form.querySelector(`input[name="${questionId}"]:checked`);
+                const correctAnswer = answers[questionId];
+
+                if (selectedAnswer) {
+                    const answerValue = selectedAnswer.value;
+                    if (answerValue === correctAnswer) {
+                        score += pointsPerQuestion;
+                        resultOutput += `<p>Pregunta ${i}: <span class="correct">Correcta</span></p>`;
+                    } else {
+                        resultOutput += `<p>Pregunta ${i}: <span class="incorrect">Incorrecta</span></p>`;
+                    }
+                } else {
+                    resultOutput += `<p>Pregunta ${i}: <span class="not-answered">No respondida</span></p>`;
+                }
+            }
+
+            const totalPoints = totalQuestions * pointsPerQuestion;
+            const percentage = (score / totalPoints) * 100;
+
+            document.getElementById('score').innerHTML = `
+                <p>Tu nota obtenida es: ${score.toFixed(2)} de ${totalPoints} (${percentage.toFixed(2)}%)</p>
+                ${resultOutput}
+            `;
+        }
+    </script>

@@ -55,6 +55,7 @@
     </style>
     <script>
         function calcularNota() {
+            // Definir las respuestas correctas
             const respuestasCorrectas = {
                 "q1": "a", "q2": "a", "q3": "a", "q4": "a", "q5": "a",
                 "q6": "a", "q7": "a", "q8": "a", "q9": "a", "q10": "a",
@@ -67,13 +68,16 @@
             };
 
             let puntos = 0;
+            // Recorre las preguntas y verifica las respuestas
             for (let i = 1; i <= 40; i++) {
-                const pregunta = document.querySelector(`input[name="q${i}"]:checked`);
-                if (pregunta && pregunta.value === respuestasCorrectas[`q${i}`]) {
-                    puntos += 0.25;
+                const respuestaSeleccionada = document.querySelector(`input[name="q${i}"]:checked`);
+                if (respuestaSeleccionada && respuestaSeleccionada.value === respuestasCorrectas[`q${i}`]) {
+                    puntos += 0.25; // Cada respuesta correcta vale 0.25 puntos
                 }
             }
+            // Calcula la nota en porcentaje
             const nota = (puntos / 10) * 100;
+            // Muestra la nota en el div de resultado
             document.getElementById('resultado').innerText = `Tu nota es: ${nota.toFixed(2)}%`;
         }
     </script>

@@ -31,6 +31,18 @@ function displayQuestions() {
 }
 
 function calculateScore() {
+    // Obtener el número de intentos del almacenamiento local
+    let attempts = parseInt(localStorage.getItem('quizAttempts')) || 0;
+
+    // Verificar el límite de intentos
+    if (attempts >= 5) {
+        document.getElementById('score').innerHTML = '<p>Has alcanzado el máximo número de intentos permitidos.</p>';
+        return;
+    }
+
+    // Incrementar el número de intentos y guardarlo en el almacenamiento local
+    localStorage.setItem('quizAttempts', attempts + 1);
+
     const answers = {
         q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a',
         q6: 'a', q7: 'a', q8: 'a', q9: 'a', q10: 'a',
@@ -76,4 +88,4 @@ function calculateScore() {
 }
 
 // Inicializar el cuestionario con respuestas mezcladas
-window.onload = display
+window.onload = displayQuestions;

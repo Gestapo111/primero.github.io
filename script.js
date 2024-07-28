@@ -14,15 +14,17 @@ function displayQuestions() {
     ];
 
     questionIds.forEach(questionId => {
-        const answers = Array.from(document.querySelectorAll(`#${questionId}-answers input`));
+        const container = document.getElementById(`${questionId}-answers`);
+        const answers = Array.from(container.querySelectorAll('label'));
+        
+        // Shuffle the answers
         shuffleArray(answers);
 
-        const container = document.getElementById(`${questionId}-answers`);
-        container.innerHTML = '';
-        answers.forEach(answer => container.appendChild(answer));
+        // Re-attach shuffled answers to the container
         answers.forEach(answer => {
-            const label = document.querySelector(`label[for="${answer.id}"]`);
-            container.appendChild(label);
+            const input = container.querySelector(`input[id="${answer.htmlFor}"]`);
+            container.appendChild(input);
+            container.appendChild(answer);
             container.appendChild(document.createElement('br'));
         });
     });
@@ -74,4 +76,4 @@ function calculateScore() {
 }
 
 // Inicializar el cuestionario con respuestas mezcladas
-window.onload = displayQuestions;
+window.onload = display

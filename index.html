@@ -68,463 +68,503 @@
 <body>
     <header>
         <h1>Cuestionarios de Ciencias</h1>
+    </header>
 
-        <!-- El Estudio de las Ciencias Naturales -->
+    <div class="container">
+        <!-- El Estudio de las Ciencias Naturales (Bases de la ciencia y la investigación) -->
         <div class="quiz-section" id="ciencias-naturales">
-            <h2>El Estudio de las Ciencias Naturales</h2>
+            <h2>El Estudio de las Ciencias Naturales (Bases de la ciencia y la investigación)</h2>
             <form id="form-ciencias-naturales">
+                <!-- Preguntas del cuestionario aquí -->
                 <div class="question">
-                    <p>1. ¿Cuál de las siguientes afirmaciones describe mejor el método científico?</p>
+                    <p>1. ¿Qué es una hipótesis en el contexto científico?</p>
                     <div class="answer">
-                        <input type="radio" name="q1" value="A"> A) Una serie de pasos ordenados y sistemáticos para investigar fenómenos<br>
-                        <input type="radio" name="q1" value="B"> B) Una suposición sin pruebas sobre un fenómeno<br>
-                        <input type="radio" name="q1" value="C"> C) Un experimento único sin necesidad de repetición<br>
-                        <input type="radio" name="q1" value="D"> D) Un proceso aleatorio para obtener resultados<br>
+                        <input type="radio" id="ciencias1-a" name="ciencias1" value="A">
+                        <label for="ciencias1-a">Una explicación definitiva y probada.</label><br>
+                        <input type="radio" id="ciencias1-b" name="ciencias1" value="B">
+                        <label for="ciencias1-b">Una posible explicación basada en observaciones previas.</label><br>
+                        <input type="radio" id="ciencias1-c" name="ciencias1" value="C">
+                        <label for="ciencias1-c">Un hecho comprobado científicamente.</label><br>
+                        <input type="radio" id="ciencias1-d" name="ciencias1" value="D">
+                        <label for="ciencias1-d">Una serie de experimentos concluyentes.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>2. ¿Qué es una hipótesis en el contexto científico?</p>
+                    <p>2. ¿Cuál es el primer paso en el método científico?</p>
                     <div class="answer">
-                        <input type="radio" name="q2" value="A"> A) Un resultado comprobado de un experimento<br>
-                        <input type="radio" name="q2" value="B"> B) Una explicación tentativa que se puede probar<br>
-                        <input type="radio" name="q2" value="C"> C) Una serie de datos recolectados<br>
-                        <input type="radio" name="q2" value="D"> D) Una observación casual sin rigor<br>
+                        <input type="radio" id="ciencias2-a" name="ciencias2" value="A">
+                        <label for="ciencias2-a">Formular una hipótesis.</label><br>
+                        <input type="radio" id="ciencias2-b" name="ciencias2" value="B">
+                        <label for="ciencias2-b">Realizar experimentos.</label><br>
+                        <input type="radio" id="ciencias2-c" name="ciencias2" value="C">
+                        <label for="ciencias2-c">Hacer observaciones.</label><br>
+                        <input type="radio" id="ciencias2-d" name="ciencias2" value="D">
+                        <label for="ciencias2-d">Analizar los resultados.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>3. ¿Cuál es la importancia de la repetibilidad en la investigación científica?</p>
+                    <p>3. ¿Qué caracteriza a una teoría científica?</p>
                     <div class="answer">
-                        <input type="radio" name="q3" value="A"> A) Permite validar los resultados y aumentar su credibilidad<br>
-                        <input type="radio" name="q3" value="B"> B) Es un paso opcional en la investigación<br>
-                        <input type="radio" name="q3" value="C"> C) Se utiliza solo para experimentos fallidos<br>
-                        <input type="radio" name="q3" value="D"> D) No tiene relevancia para los resultados<br>
+                        <input type="radio" id="ciencias3-a" name="ciencias3" value="A">
+                        <label for="ciencias3-a">Es una explicación final y aceptada sin posibilidad de cambio.</label><br>
+                        <input type="radio" id="ciencias3-b" name="ciencias3" value="B">
+                        <label for="ciencias3-b">Es una explicación basada en múltiples experimentos y evidencias.</label><br>
+                        <input type="radio" id="ciencias3-c" name="ciencias3" value="C">
+                        <label for="ciencias3-c">Es una afirmación sin respaldo empírico.</label><br>
+                        <input type="radio" id="ciencias3-d" name="ciencias3" value="D">
+                        <label for="ciencias3-d">Es una suposición no verificada.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>4. ¿Qué rol juegan las teorías en la ciencia?</p>
+                    <p>4. ¿Qué es un experimento controlado?</p>
                     <div class="answer">
-                        <input type="radio" name="q4" value="A"> A) Explican y organizan observaciones basadas en evidencia<br>
-                        <input type="radio" name="q4" value="B"> B) Son suposiciones sin necesidad de pruebas<br>
-                        <input type="radio" name="q4" value="C"> C) Son opiniones personales de los científicos<br>
-                        <input type="radio" name="q4" value="D"> D) Solo se utilizan en campos no científicos<br>
+                        <input type="radio" id="ciencias4-a" name="ciencias4" value="A">
+                        <label for="ciencias4-a">Un experimento en el que sólo se manipula una variable.</label><br>
+                        <input type="radio" id="ciencias4-b" name="ciencias4" value="B">
+                        <label for="ciencias4-b">Un experimento en el que no se controla ninguna variable.</label><br>
+                        <input type="radio" id="ciencias4-c" name="ciencias4" value="C">
+                        <label for="ciencias4-c">Un experimento que utiliza varias variables sin control.</label><br>
+                        <input type="radio" id="ciencias4-d" name="ciencias4" value="D">
+                        <label for="ciencias4-d">Un experimento en el que se observa la naturaleza sin intervención.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>5. ¿Qué se entiende por variable controlada en un experimento?</p>
+                    <p>5. ¿Cómo se valida una teoría científica?</p>
                     <div class="answer">
-                        <input type="radio" name="q5" value="A"> A) Una variable que se mantiene constante para no influir en el resultado<br>
-                        <input type="radio" name="q5" value="B"> B) Una variable que se manipula para observar su efecto<br>
-                        <input type="radio" name="q5" value="C"> C) Una variable que cambia de forma aleatoria<br>
-                        <input type="radio" name="q5" value="D"> D) Una variable que se mide para obtener resultados<br>
+                        <input type="radio" id="ciencias5-a" name="ciencias5" value="A">
+                        <label for="ciencias5-a">A través de un consenso general sin necesidad de pruebas.</label><br>
+                        <input type="radio" id="ciencias5-b" name="ciencias5" value="B">
+                        <label for="ciencias5-b">Mediante la repetición de experimentos y la verificación de resultados.</label><br>
+                        <input type="radio" id="ciencias5-c" name="ciencias5" value="C">
+                        <label for="ciencias5-c">Con una opinión de la mayoría de los científicos.</label><br>
+                        <input type="radio" id="ciencias5-d" name="ciencias5" value="D">
+                        <label for="ciencias5-d">A través de la publicación en revistas científicas sin revisión.</label>
                     </div>
                 </div>
-                <button type="button" class="submit-btn" onclick="calcularNota('form-ciencias-naturales', 5)">Calcular Nota</button>
-                <div class="result" id="result-ciencias-naturales"></div>
+                <!-- Más preguntas para el área de ciencias-naturales aquí -->
             </form>
+            <button type="button" class="submit-btn" onclick="calcularNota('form-ciencias-naturales', 5)">Obtener Nota</button>
+            <div class="result" id="result-ciencias-naturales"></div>
+            <div class="attempt-info" id="attempt-info-ciencias-naturales"></div>
         </div>
 
         <!-- El Movimiento (Física) -->
         <div class="quiz-section" id="fisica-movimiento">
             <h2>El Movimiento (Física)</h2>
             <form id="form-fisica-movimiento">
+                <!-- Preguntas del cuestionario aquí -->
                 <div class="question">
-                    <p>1. ¿Cuál es la fórmula para calcular la velocidad?</p>
+                    <p>1. ¿Cómo se define el movimiento?</p>
                     <div class="answer">
-                        <input type="radio" name="q1" value="A"> A) Velocidad = Distancia / Tiempo<br>
-                        <input type="radio" name="q1" value="B"> B) Velocidad = Tiempo / Distancia<br>
-                        <input type="radio" name="q1" value="C"> C) Velocidad = Distancia + Tiempo<br>
-                        <input type="radio" name="q1" value="D"> D) Velocidad = Distancia - Tiempo<br>
+                        <input type="radio" id="fisica1-a" name="fisica1" value="A">
+                        <label for="fisica1-a">Como un cambio en la posición de un objeto con respecto al tiempo.</label><br>
+                        <input type="radio" id="fisica1-b" name="fisica1" value="B">
+                        <label for="fisica1-b">Como la velocidad constante de un objeto.</label><br>
+                        <input type="radio" id="fisica1-c" name="fisica1" value="C">
+                        <label for="fisica1-c">Como la aceleración de un objeto sin movimiento.</label><br>
+                        <input type="radio" id="fisica1-d" name="fisica1" value="D">
+                        <label for="fisica1-d">Como el cambio en la temperatura de un objeto.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>2. ¿Qué se entiende por aceleración en física?</p>
+                    <p>2. ¿Qué es la velocidad media?</p>
                     <div class="answer">
-                        <input type="radio" name="q2" value="A"> A) El cambio en la velocidad por unidad de tiempo<br>
-                        <input type="radio" name="q2" value="B"> B) La velocidad constante durante un tiempo<br>
-                        <input type="radio" name="q2" value="C"> C) La distancia recorrida en un intervalo<br>
-                        <input type="radio" name="q2" value="D"> D) La fuerza aplicada a un objeto<br>
+                        <input type="radio" id="fisica2-a" name="fisica2" value="A">
+                        <label for="fisica2-a">La distancia recorrida dividida por el tiempo total.</label><br>
+                        <input type="radio" id="fisica2-b" name="fisica2" value="B">
+                        <label for="fisica2-b">El cambio de posición por unidad de tiempo.</label><br>
+                        <input type="radio" id="fisica2-c" name="fisica2" value="C">
+                        <label for="fisica2-c">La aceleración de un objeto en movimiento.</label><br>
+                        <input type="radio" id="fisica2-d" name="fisica2" value="D">
+                        <label for="fisica2-d">El tiempo que tarda un objeto en llegar a su destino.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>3. ¿Cómo se mide la aceleración?</p>
+                    <p>3. ¿Cuál es la fórmula para calcular la aceleración?</p>
                     <div class="answer">
-                        <input type="radio" name="q3" value="A"> A) En metros por segundo al cuadrado (m/s²)<br>
-                        <input type="radio" name="q3" value="B"> B) En metros por segundo (m/s)<br>
-                        <input type="radio" name="q3" value="C"> C) En kilómetros por hora (km/h)<br>
-                        <input type="radio" name="q3" value="D"> D) En Newtons (N)<br>
+                        <input type="radio" id="fisica3-a" name="fisica3" value="A">
+                        <label for="fisica3-a">a = (vf - vi) / t</label><br>
+                        <input type="radio" id="fisica3-b" name="fisica3" value="B">
+                        <label for="fisica3-b">a = v / t</label><br>
+                        <input type="radio" id="fisica3-c" name="fisica3" value="C">
+                        <label for="fisica3-c">a = d / t</label><br>
+                        <input type="radio" id="fisica3-d" name="fisica3" value="D">
+                        <label for="fisica3-d">a = v / d</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>4. ¿Qué describe la segunda ley de Newton?</p>
+                    <p>4. ¿Qué es la aceleración constante?</p>
                     <div class="answer">
-                        <input type="radio" name="q4" value="A"> A) La relación entre fuerza, masa y aceleración<br>
-                        <input type="radio" name="q4" value="B"> B) La ley de acción y reacción<br>
-                        <input type="radio" name="q4" value="C"> C) La ley de la inercia<br>
-                        <input type="radio" name="q4" value="D"> D) La relación entre velocidad y distancia<br>
+                        <input type="radio" id="fisica4-a" name="fisica4" value="A">
+                        <label for="fisica4-a">Un cambio en la velocidad que ocurre de manera uniforme.</label><br>
+                        <input type="radio" id="fisica4-b" name="fisica4" value="B">
+                        <label for="fisica4-b">Una velocidad que cambia abruptamente.</label><br>
+                        <input type="radio" id="fisica4-c" name="fisica4" value="C">
+                        <label for="fisica4-c">Un cambio en la dirección del movimiento.</label><br>
+                        <input type="radio" id="fisica4-d" name="fisica4" value="D">
+                        <label for="fisica4-d">Una velocidad constante sin cambios.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>5. ¿Qué es la velocidad media?</p>
+                    <p>5. ¿Qué es la velocidad instantánea?</p>
                     <div class="answer">
-                        <input type="radio" name="q5" value="A"> A) La distancia total recorrida dividida por el tiempo total<br>
-                        <input type="radio" name="q5" value="B"> B) La distancia recorrida en un instante<br>
-                        <input type="radio" name="q5" value="C"> C) La aceleración promedio durante el viaje<br>
-                        <input type="radio" name="q5" value="D"> D) La velocidad en un punto específico<br>
+                        <input type="radio" id="fisica5-a" name="fisica5" value="A">
+                        <label for="fisica5-a">La velocidad de un objeto en un momento específico.</label><br>
+                        <input type="radio" id="fisica5-b" name="fisica5" value="B">
+                        <label for="fisica5-b">La velocidad promedio durante un intervalo de tiempo.</label><br>
+                        <input type="radio" id="fisica5-c" name="fisica5" value="C">
+                        <label for="fisica5-c">La velocidad máxima alcanzada durante el movimiento.</label><br>
+                        <input type="radio" id="fisica5-d" name="fisica5" value="D">
+                        <label for="fisica5-d">La velocidad al final del trayecto.</label>
                     </div>
                 </div>
-                <button type="button" class="submit-btn" onclick="calcularNota('form-fisica-movimiento', 5)">Calcular Nota</button>
-                <div class="result" id="result-fisica-movimiento"></div>
+                <!-- Más preguntas para el área de fisica-movimiento aquí -->
             </form>
+            <button type="button" class="submit-btn" onclick="calcularNota('form-fisica-movimiento', 5)">Obtener Nota</button>
+            <div class="result" id="result-fisica-movimiento"></div>
+            <div class="attempt-info" id="attempt-info-fisica-movimiento"></div>
         </div>
 
         <!-- Estática y Dinámica (Física) -->
         <div class="quiz-section" id="fisica-estatica-dinamica">
             <h2>Estática y Dinámica (Física)</h2>
             <form id="form-fisica-estatica-dinamica">
+                <!-- Preguntas del cuestionario aquí -->
                 <div class="question">
-                    <p>1. ¿Qué es la estática en física?</p>
+                    <p>1. ¿Qué estudia la estática?</p>
                     <div class="answer">
-                        <input type="radio" name="q1" value="A"> A) El estudio de los cuerpos en reposo o en equilibrio<br>
-                        <input type="radio" name="q1" value="B"> B) El estudio del movimiento de los cuerpos<br>
-                        <input type="radio" name="q1" value="C"> C) El estudio de las fuerzas en movimiento<br>
-                        <input type="radio" name="q1" value="D"> D) El estudio de la aceleración de los cuerpos<br>
+                        <input type="radio" id="estatica1-a" name="estatica1" value="A">
+                        <label for="estatica1-a">El equilibrio de cuerpos en reposo.</label><br>
+                        <input type="radio" id="estatica1-b" name="estatica1" value="B">
+                        <label for="estatica1-b">El movimiento de los cuerpos.</label><br>
+                        <input type="radio" id="estatica1-c" name="estatica1" value="C">
+                        <label for="estatica1-c">La energía cinética de los cuerpos.</label><br>
+                        <input type="radio" id="estatica1-d" name="estatica1" value="D">
+                        <label for="estatica1-d">Las reacciones químicas.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>2. ¿Cuál es la fórmula de la segunda ley de Newton?</p>
+                    <p>2. ¿Qué es la dinámica?</p>
                     <div class="answer">
-                        <input type="radio" name="q2" value="A"> A) F = m * a<br>
-                        <input type="radio" name="q2" value="B"> B) F = m + a<br>
-                        <input type="radio" name="q2" value="C"> C) F = m - a<br>
-                        <input type="radio" name="q2" value="D"> D) F = m / a<br>
+                        <input type="radio" id="estatica2-a" name="estatica2" value="A">
+                        <label for="estatica2-a">El estudio de las fuerzas y sus efectos en el movimiento.</label><br>
+                        <input type="radio" id="estatica2-b" name="estatica2" value="B">
+                        <label for="estatica2-b">El análisis de los cuerpos en equilibrio.</label><br>
+                        <input type="radio" id="estatica2-c" name="estatica2" value="C">
+                        <label for="estatica2-c">La descripción de los estados de reposo.</label><br>
+                        <input type="radio" id="estatica2-d" name="estatica2" value="D">
+                        <label for="estatica2-d">La medición de la temperatura.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>3. ¿Qué es el equilibrio estático?</p>
+                    <p>3. ¿Qué es la fuerza neta?</p>
                     <div class="answer">
-                        <input type="radio" name="q3" value="A"> A) Cuando la suma de todas las fuerzas y momentos es cero<br>
-                        <input type="radio" name="q3" value="B"> B) Cuando un objeto se mueve a velocidad constante<br>
-                        <input type="radio" name="q3" value="C"> C) Cuando un objeto acelera<br>
-                        <input type="radio" name="q3" value="D"> D) Cuando las fuerzas se cancelan<br>
+                        <input type="radio" id="estatica3-a" name="estatica3" value="A">
+                        <label for="estatica3-a">La suma vectorial de todas las fuerzas que actúan sobre un cuerpo.</label><br>
+                        <input type="radio" id="estatica3-b" name="estatica3" value="B">
+                        <label for="estatica3-b">La fuerza que actúa en una dirección específica.</label><br>
+                        <input type="radio" id="estatica3-c" name="estatica3" value="C">
+                        <label for="estatica3-c">La fuerza de fricción únicamente.</label><br>
+                        <input type="radio" id="estatica3-d" name="estatica3" value="D">
+                        <label for="estatica3-d">La fuerza aplicada por un motor.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>4. ¿Qué caracteriza a la dinámica en comparación con la estática?</p>
+                    <p>4. ¿Qué es el equilibrio estático?</p>
                     <div class="answer">
-                        <input type="radio" name="q4" value="A"> A) El estudio del movimiento y las fuerzas asociadas<br>
-                        <input type="radio" name="q4" value="B"> B) El estudio de los cuerpos en reposo<br>
-                        <input type="radio" name="q4" value="C"> C) El estudio de los objetos sin interacción<br>
-                        <input type="radio" name="q4" value="D"> D) El estudio de la velocidad en reposo<br>
+                        <input type="radio" id="estatica4-a" name="estatica4" value="A">
+                        <label for="estatica4-a">Cuando la suma de las fuerzas y momentos sobre un cuerpo es cero.</label><br>
+                        <input type="radio" id="estatica4-b" name="estatica4" value="B">
+                        <label for="estatica4-b">Cuando un cuerpo está en movimiento uniforme.</label><br>
+                        <input type="radio" id="estatica4-c" name="estatica4" value="C">
+                        <label for="estatica4-c">Cuando un cuerpo está en aceleración constante.</label><br>
+                        <input type="radio" id="estatica4-d" name="estatica4" value="D">
+                        <label for="estatica4-d">Cuando un cuerpo está a punto de desintegrarse.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>5. ¿Cómo se mide la fuerza en el sistema internacional de unidades?</p>
+                    <p>5. ¿Qué establece la segunda ley de Newton?</p>
                     <div class="answer">
-                        <input type="radio" name="q5" value="A"> A) En Newtons (N)<br>
-                        <input type="radio" name="q5" value="B"> B) En Kilogramos (kg)<br>
-                        <input type="radio" name="q5" value="C"> C) En Metros (m)<br>
-                        <input type="radio" name="q5" value="D"> D) En Segundos (s)<br>
+                        <input type="radio" id="estatica5-a" name="estatica5" value="A">
+                        <label for="estatica5-a">La aceleración de un objeto es directamente proporcional a la fuerza neta aplicada e inversamente proporcional a su masa.</label><br>
+                        <input type="radio" id="estatica5-b" name="estatica5" value="B">
+                        <label for="estatica5-b">La velocidad de un objeto es constante si no hay fuerzas actuantes.</label><br>
+                        <input type="radio" id="estatica5-c" name="estatica5" value="C">
+                        <label for="estatica5-c">La fuerza es igual a la masa por la velocidad.</label><br>
+                        <input type="radio" id="estatica5-d" name="estatica5" value="D">
+                        <label for="estatica5-d">La energía se conserva en un sistema cerrado.</label>
                     </div>
                 </div>
-                <button type="button" class="submit-btn" onclick="calcularNota('form-fisica-estatica-dinamica', 5)">Calcular Nota</button>
-                <div class="result" id="result-fisica-estatica-dinamica"></div>
+                <!-- Más preguntas para el área de fisica-estatica-dinamica aquí -->
             </form>
+            <button type="button" class="submit-btn" onclick="calcularNota('form-fisica-estatica-dinamica', 5)">Obtener Nota</button>
+            <div class="result" id="result-fisica-estatica-dinamica"></div>
+            <div class="attempt-info" id="attempt-info-fisica-estatica-dinamica"></div>
         </div>
 
         <!-- La Termodinámica (Física) -->
         <div class="quiz-section" id="fisica-termodinamica">
             <h2>La Termodinámica (Física)</h2>
             <form id="form-fisica-termodinamica">
+                <!-- Preguntas del cuestionario aquí -->
                 <div class="question">
-                    <p>1. ¿Cuál es la primera ley de la termodinámica?</p>
+                    <p>1. ¿Qué establece la primera ley de la termodinámica?</p>
                     <div class="answer">
-                        <input type="radio" name="q1" value="A"> A) La energía no se crea ni se destruye, solo se transforma<br>
-                        <input type="radio" name="q1" value="B"> B) La entropía siempre disminuye<br>
-                        <input type="radio" name="q1" value="C"> C) La presión de un gas es inversamente proporcional a su volumen<br>
-                        <input type="radio" name="q1" value="D"> D) La temperatura es constante en un sistema cerrado<br>
+                        <input type="radio" id="termodinamica1-a" name="termodinamica1" value="A">
+                        <label for="termodinamica1-a">La energía no se puede crear ni destruir, solo transformar.</label><br>
+                        <input type="radio" id="termodinamica1-b" name="termodinamica1" value="B">
+                        <label for="termodinamica1-b">La entropía de un sistema siempre aumenta.</label><br>
+                        <input type="radio" id="termodinamica1-c" name="termodinamica1" value="C">
+                        <label for="termodinamica1-c">La temperatura es constante en un sistema cerrado.</label><br>
+                        <input type="radio" id="termodinamica1-d" name="termodinamica1" value="D">
+                        <label for="termodinamica1-d">La energía de un sistema es directamente proporcional a su volumen.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>2. ¿Qué describe la segunda ley de la termodinámica?</p>
+                    <p>2. ¿Qué es la entalpía?</p>
                     <div class="answer">
-                        <input type="radio" name="q2" value="A"> A) La entropía de un sistema aislado siempre aumenta<br>
-                        <input type="radio" name="q2" value="B"> B) La energía total de un sistema es constante<br>
-                        <input type="radio" name="q2" value="C"> C) La presión es constante a temperatura constante<br>
-                        <input type="radio" name="q2" value="D"> D) La temperatura de un gas se mantiene constante<br>
+                        <input type="radio" id="termodinamica2-a" name="termodinamica2" value="A">
+                        <label for="termodinamica2-a">La cantidad total de energía interna y trabajo en un sistema.</label><br>
+                        <input type="radio" id="termodinamica2-b" name="termodinamica2" value="B">
+                        <label for="termodinamica2-b">La energía cinética de las partículas en un gas.</label><br>
+                        <input type="radio" id="termodinamica2-c" name="termodinamica2" value="C">
+                        <label for="termodinamica2-c">La cantidad de calor necesario para un cambio de fase.</label><br>
+                        <input type="radio" id="termodinamica2-d" name="termodinamica2" value="D">
+                        <label for="termodinamica2-d">La energía total de un sistema en equilibrio.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>3. ¿Qué es la entalpía?</p>
+                    <p>3. ¿Qué es la entropía?</p>
                     <div class="answer">
-                        <input type="radio" name="q3" value="A"> A) La cantidad de energía en un sistema termodinámico<br>
-                        <input type="radio" name="q3" value="B"> B) La masa de un sistema<br>
-                        <input type="radio" name="q3" value="C"> C) La densidad de un sistema<br>
-                        <input type="radio" name="q3" value="D"> D) La velocidad de un sistema<br>
+                        <input type="radio" id="termodinamica3-a" name="termodinamica3" value="A">
+                        <label for="termodinamica3-a">Una medida del desorden o aleatoriedad en un sistema.</label><br>
+                        <input type="radio" id="termodinamica3-b" name="termodinamica3" value="B">
+                        <label for="termodinamica3-b">La cantidad de trabajo realizado por un sistema.</label><br>
+                        <input type="radio" id="termodinamica3-c" name="termodinamica3" value="C">
+                        <label for="termodinamica3-c">La energía interna total de un sistema.</label><br>
+                        <input type="radio" id="termodinamica3-d" name="termodinamica3" value="D">
+                        <label for="termodinamica3-d">La cantidad de calor absorbido por un sistema.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>4. ¿Qué es la ley de Boyle?</p>
+                    <p>4. ¿Cuál es el segundo principio de la termodinámica?</p>
                     <div class="answer">
-                        <input type="radio" name="q4" value="A"> A) La presión de un gas es inversamente proporcional a su volumen a temperatura constante<br>
-                        <input type="radio" name="q4" value="B"> B) La temperatura de un gas es proporcional a su volumen a presión constante<br>
-                        <input type="radio" name="q4" value="C"> C) La energía total en un sistema es constante<br>
-                        <input type="radio" name="q4" value="D"> D) La presión es constante en todos los puntos de un fluido<br>
+                        <input type="radio" id="termodinamica4-a" name="termodinamica4" value="A">
+                        <label for="termodinamica4-a">La entropía total de un sistema cerrado siempre aumenta.</label><br>
+                        <input type="radio" id="termodinamica4-b" name="termodinamica4" value="B">
+                        <label for="termodinamica4-b">La energía total en un sistema cerrado se mantiene constante.</label><br>
+                        <input type="radio" id="termodinamica4-c" name="termodinamica4" value="C">
+                        <label for="termodinamica4-c">La energía puede ser creada o destruida, pero nunca transformada.</label><br>
+                        <input type="radio" id="termodinamica4-d" name="termodinamica4" value="D">
+                        <label for="termodinamica4-d">La entalpía de un sistema en equilibrio es constante.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>5. ¿Cuál es el concepto de calor en termodinámica?</p>
+                    <p>5. ¿Qué es el ciclo de Carnot?</p>
                     <div class="answer">
-                        <input type="radio" name="q5" value="A"> A) Energía transferida entre sistemas debido a una diferencia de temperatura<br>
-                        <input type="radio" name="q5" value="B"> B) La energía almacenada en un sistema<br>
-                        <input type="radio" name="q5" value="C"> C) La cantidad de masa en un sistema<br>
-                        <input type="radio" name="q5" value="D"> D) La velocidad de las partículas en un sistema<br>
+                        <input type="radio" id="termodinamica5-a" name="termodinamica5" value="A">
+                        <label for="termodinamica5-a">Un ciclo ideal que describe el rendimiento máximo de una máquina térmica.</label><br>
+                        <input type="radio" id="termodinamica5-b" name="termodinamica5" value="B">
+                        <label for="termodinamica5-b">Un proceso en el que la energía se convierte completamente en trabajo.</label><br>
+                        <input type="radio" id="termodinamica5-c" name="termodinamica5" value="C">
+                        <label for="termodinamica5-c">Un proceso en el que la energía se conserva en un sistema cerrado.</label><br>
+                        <input type="radio" id="termodinamica5-d" name="termodinamica5" value="D">
+                        <label for="termodinamica5-d">Un método para medir la entalpía de un sistema.</label>
                     </div>
                 </div>
-                <button type="button" class="submit-btn" onclick="calcularNota('form-fisica-termodinamica', 5)">Calcular Nota</button>
-                <div class="result" id="result-fisica-termodinamica"></div>
+                <!-- Más preguntas para el área de fisica-termodinamica aquí -->
             </form>
+            <button type="button" class="submit-btn" onclick="calcularNota('form-fisica-termodinamica', 5)">Obtener Nota</button>
+            <div class="result" id="result-fisica-termodinamica"></div>
+            <div class="attempt-info" id="attempt-info-fisica-termodinamica"></div>
         </div>
 
         <!-- La historia de la Tierra (Geología) -->
         <div class="quiz-section" id="geologia-historia-tierra">
-            <h2>La Historia de la Tierra (Geología)</h2>
+            <h2>La historia de la Tierra (Geología)</h2>
             <form id="form-geologia-historia-tierra">
+                <!-- Preguntas del cuestionario aquí -->
                 <div class="question">
-                    <p>1. ¿Qué es el principio de uniformidad en geología?</p>
+                    <p>1. ¿Cuándo se formó la Tierra según la teoría más aceptada?</p>
                     <div class="answer">
-                        <input type="radio" name="q1" value="A"> A) Los procesos que ocurrieron en el pasado se observan en la actualidad<br>
-                        <input type="radio" name="q1" value="B"> B) Los procesos geológicos cambian con el tiempo<br>
-                        <input type="radio" name="q1" value="C"> C) Los eventos geológicos son aleatorios<br>
-                        <input type="radio" name="q1" value="D"> D) Los procesos geológicos son únicos y no repetibles<br>
+                        <input type="radio" id="geologia1-a" name="geologia1" value="A">
+                        <label for="geologia1-a">Hace aproximadamente 4.6 mil millones de años.</label><br>
+                        <input type="radio" id="geologia1-b" name="geologia1" value="B">
+                        <label for="geologia1-b">Hace aproximadamente 2.5 mil millones de años.</label><br>
+                        <input type="radio" id="geologia1-c" name="geologia1" value="C">
+                        <label for="geologia1-c">Hace aproximadamente 1.2 mil millones de años.</label><br>
+                        <input type="radio" id="geologia1-d" name="geologia1" value="D">
+                        <label for="geologia1-d">Hace aproximadamente 500 millones de años.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>2. ¿Qué periodo geológico sigue al Cámbrico?</p>
+                    <p>2. ¿Qué es la deriva continental?</p>
                     <div class="answer">
-                        <input type="radio" name="q2" value="A"> A) Ordovícico<br>
-                        <input type="radio" name="q2" value="B"> B) Silúrico<br>
-                        <input type="radio" name="q2" value="C"> C) Devónico<br>
-                        <input type="radio" name="q2" value="D"> D) Carbonífero<br>
+                        <input type="radio" id="geologia2-a" name="geologia2" value="A">
+                        <label for="geologia2-a">El movimiento de los continentes a lo largo de la superficie terrestre.</label><br>
+                        <input type="radio" id="geologia2-b" name="geologia2" value="B">
+                        <label for="geologia2-b">La formación de montañas debido a la erosión.</label><br>
+                        <input type="radio" id="geologia2-c" name="geologia2" value="C">
+                        <label for="geologia2-c">La acumulación de sedimentos en los océanos.</label><br>
+                        <input type="radio" id="geologia2-d" name="geologia2" value="D">
+                        <label for="geologia2-d">La creación de nuevas placas tectónicas.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>3. ¿Qué evento marca el final de la era Mesozoica?</p>
+                    <p>3. ¿Qué evidencia apoya la teoría de la deriva continental?</p>
                     <div class="answer">
-                        <input type="radio" name="q3" value="A"> A) La extinción de los dinosaurios<br>
-                        <input type="radio" name="q3" value="B"> B) La formación de los continentes<br>
-                        <input type="radio" name="q3" value="C"> C) La aparición de los primeros mamíferos<br>
-                        <input type="radio" name="q3" value="D"> D) La formación de la atmósfera<br>
+                        <input type="radio" id="geologia3-a" name="geologia3" value="A">
+                        <label for="geologia3-a">Similitudes en fósiles y formaciones rocosas en continentes separados.</label><br>
+                        <input type="radio" id="geologia3-b" name="geologia3" value="B">
+                        <label for="geologia3-b">La presencia de grandes océanos entre continentes.</label><br>
+                        <input type="radio" id="geologia3-c" name="geologia3" value="C">
+                        <label for="geologia3-c">La aparición de volcanes en la Tierra.</label><br>
+                        <input type="radio" id="geologia3-d" name="geologia3" value="D">
+                        <label for="geologia3-d">La formación de islas en el océano Pacífico.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>4. ¿Qué técnica geológica se utiliza para datar las rocas?</p>
+                    <p>4. ¿Qué es la tectónica de placas?</p>
                     <div class="answer">
-                        <input type="radio" name="q4" value="A"> A) Datación radiométrica<br>
-                        <input type="radio" name="q4" value="B"> B) Observación visual<br>
-                        <input type="radio" name="q4" value="C"> C) Análisis de textura<br>
-                        <input type="radio" name="q4" value="D"> D) Estudio de fósiles<br>
+                        <input type="radio" id="geologia4-a" name="geologia4" value="A">
+                        <label for="geologia4-a">El estudio de los movimientos de las placas tectónicas que forman la corteza terrestre.</label><br>
+                        <input type="radio" id="geologia4-b" name="geologia4" value="B">
+                        <label for="geologia4-b">La investigación de los cambios en la atmósfera terrestre.</label><br>
+                        <input type="radio" id="geologia4-c" name="geologia4" value="C">
+                        <label for="geologia4-c">El análisis de los procesos de erosión en la superficie terrestre.</label><br>
+                        <input type="radio" id="geologia4-d" name="geologia4" value="D">
+                        <label for="geologia4-d">El estudio de los ciclos de vida de las especies en la Tierra.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>5. ¿Cuál es la evidencia más importante de la deriva continental?</p>
+                    <p>5. ¿Qué es la estratigrafía?</p>
                     <div class="answer">
-                        <input type="radio" name="q5" value="A"> A) La coincidencia de formas de costa y fósiles similares en continentes separados<br>
-                        <input type="radio" name="q5" value="B"> B) La formación de volcanes<br>
-                        <input type="radio" name="q5" value="C"> C) La existencia de grandes lagos<br>
-                        <input type="radio" name="q5" value="D"> D) La presencia de montañas<br>
+                        <input type="radio" id="geologia5-a" name="geologia5" value="A">
+                        <label for="geologia5-a">El estudio de las capas de roca y su secuencia histórica.</label><br>
+                        <input type="radio" id="geologia5-b" name="geologia5" value="B">
+                        <label for="geologia5-b">La investigación de los procesos volcánicos.</label><br>
+                        <input type="radio" id="geologia5-c" name="geologia5" value="C">
+                        <label for="geologia5-c">El análisis de los cambios en la temperatura global.</label><br>
+                        <input type="radio" id="geologia5-d" name="geologia5" value="D">
+                        <label for="geologia5-d">La medición de la actividad sísmica en una región.</label>
                     </div>
                 </div>
-                <button type="button" class="submit-btn" onclick="calcularNota('form-geologia-historia-tierra', 5)">Calcular Nota</button>
-                <div class="result" id="result-geologia-historia-tierra"></div>
+                <!-- Más preguntas para el área de geologia-historia-tierra aquí -->
             </form>
+            <button type="button" class="submit-btn" onclick="calcularNota('form-geologia-historia-tierra', 5)">Obtener Nota</button>
+            <div class="result" id="result-geologia-historia-tierra"></div>
+            <div class="attempt-info" id="attempt-info-geologia-historia-tierra"></div>
         </div>
 
-        <!-- La Teoría Atómica (Química) -->
-        <div class="quiz-section" id="quimica-teoria-atomica">
-            <h2>La Teoría Atómica (Química)</h2>
-            <form id="form-quimica-teoria-atomica">
+        <!-- La dinámica química -->
+        <div class="quiz-section" id="quimica-dinamica">
+            <h2>La dinámica química</h2>
+            <form id="form-quimica-dinamica">
+                <!-- Preguntas del cuestionario aquí -->
                 <div class="question">
-                    <p>1. ¿Quién propuso el modelo atómico de la esfera sólida?</p>
+                    <p>1. ¿Qué es la velocidad de una reacción química?</p>
                     <div class="answer">
-                        <input type="radio" name="q1" value="A"> A) John Dalton<br>
-                        <input type="radio" name="q1" value="B"> B) J.J. Thomson<br>
-                        <input type="radio" name="q1" value="C"> C) Ernest Rutherford<br>
-                        <input type="radio" name="q1" value="D"> D) Niels Bohr<br>
+                        <input type="radio" id="quimica1-a" name="quimica1" value="A">
+                        <label for="quimica1-a">La cantidad de producto formado por unidad de tiempo.</label><br>
+                        <input type="radio" id="quimica1-b" name="quimica1" value="B">
+                        <label for="quimica1-b">La cantidad de reactivo consumido por unidad de tiempo.</label><br>
+                        <input type="radio" id="quimica1-c" name="quimica1" value="C">
+                        <label for="quimica1-c">La cantidad de energía liberada en la reacción.</label><br>
+                        <input type="radio" id="quimica1-d" name="quimica1" value="D">
+                        <label for="quimica1-d">La cantidad de reactivo presente al inicio de la reacción.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>2. ¿Qué descubrió J.J. Thomson en sus experimentos con rayos catódicos?</p>
+                    <p>2. ¿Qué es la constante de velocidad?</p>
                     <div class="answer">
-                        <input type="radio" name="q2" value="A"> A) La existencia de electrones<br>
-                        <input type="radio" name="q2" value="B"> B) La existencia de protones<br>
-                        <input type="radio" name="q2" value="C"> C) La estructura del núcleo<br>
-                        <input type="radio" name="q2" value="D"> D) La existencia de neutrones<br>
+                        <input type="radio" id="quimica2-a" name="quimica2" value="A">
+                        <label for="quimica2-a">Un valor que describe la rapidez con la que ocurre una reacción química.</label><br>
+                        <input type="radio" id="quimica2-b" name="quimica2" value="B">
+                        <label for="quimica2-b">Un valor que describe la cantidad de energía necesaria para iniciar una reacción.</label><br>
+                        <input type="radio" id="quimica2-c" name="quimica2" value="C">
+                        <label for="quimica2-c">Un valor que describe la cantidad de producto formado en una reacción.</label><br>
+                        <input type="radio" id="quimica2-d" name="quimica2" value="D">
+                        <label for="quimica2-d">Un valor que describe la concentración de reactivos en equilibrio.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>3. ¿Qué es el modelo atómico de Bohr?</p>
+                    <p>3. ¿Qué es el equilibrio químico?</p>
                     <div class="answer">
-                        <input type="radio" name="q3" value="A"> A) Un modelo con electrones orbitando el núcleo en niveles de energía específicos<br>
-                        <input type="radio" name="q3" value="B"> B) Un modelo con electrones distribuidos uniformemente en la esfera<br>
-                        <input type="radio" name="q3" value="C"> C) Un modelo con electrones en un espacio difuso alrededor del núcleo<br>
-                        <input type="radio" name="q3" value="D"> D) Un modelo sin electrones<br>
+                        <input type="radio" id="quimica3-a" name="quimica3" value="A">
+                        <label for="quimica3-a">Un estado en el que las concentraciones de reactivos y productos permanecen constantes.</label><br>
+                        <input type="radio" id="quimica3-b" name="quimica3" value="B">
+                        <label for="quimica3-b">Un estado en el que todos los reactivos se han convertido en productos.</label><br>
+                        <input type="radio" id="quimica3-c" name="quimica3" value="C">
+                        <label for="quimica3-c">Un estado en el que la reacción ha terminado.</label><br>
+                        <input type="radio" id="quimica3-d" name="quimica3" value="D">
+                        <label for="quimica3-d">Un estado en el que no se produce ninguna reacción.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>4. ¿Qué es el principio de incertidumbre de Heisenberg?</p>
+                    <p>4. ¿Qué es el efecto de la temperatura sobre la velocidad de reacción?</p>
                     <div class="answer">
-                        <input type="radio" name="q4" value="A"> A) No se puede conocer simultáneamente la posición y la velocidad de una partícula<br>
-                        <input type="radio" name="q4" value="B"> B) La posición y la velocidad de una partícula se conocen con precisión<br>
-                        <input type="radio" name="q4" value="C"> C) La velocidad de una partícula es constante<br>
-                        <input type="radio" name="q4" value="D"> D) La posición de una partícula se puede medir sin errores<br>
+                        <input type="radio" id="quimica4-a" name="quimica4" value="A">
+                        <label for="quimica4-a">Aumentar la temperatura generalmente aumenta la velocidad de reacción.</label><br>
+                        <input type="radio" id="quimica4-b" name="quimica4" value="B">
+                        <label for="quimica4-b">Aumentar la temperatura generalmente disminuye la velocidad de reacción.</label><br>
+                        <input type="radio" id="quimica4-c" name="quimica4" value="C">
+                        <label for="quimica4-c">La temperatura no tiene efecto en la velocidad de reacción.</label><br>
+                        <input type="radio" id="quimica4-d" name="quimica4" value="D">
+                        <label for="quimica4-d">Aumentar la temperatura hace que la reacción se detenga.</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>5. ¿Cuál es la unidad de medida del número atómico?</p>
+                    <p>5. ¿Qué es el catalizador en una reacción química?</p>
                     <div class="answer">
-                        <input type="radio" name="q5" value="A"> A) Unidad de masa atómica (uma)<br>
-                        <input type="radio" name="q5" value="B"> B) Coulombs (C)<br>
-                        <input type="radio" name="q5" value="C"> C) Kelvin (K)<br>
-                        <input type="radio" name="q5" value="D"> D) Moles (mol)<br>
+                        <input type="radio" id="quimica5-a" name="quimica5" value="A">
+                        <label for="quimica5-a">Una sustancia que aumenta la velocidad de reacción sin consumirse en el proceso.</label><br>
+                        <input type="radio" id="quimica5-b" name="quimica5" value="B">
+                        <label for="quimica5-b">Una sustancia que disminuye la velocidad de reacción.</label><br>
+                        <input type="radio" id="quimica5-c" name="quimica5" value="C">
+                        <label for="quimica5-c">Una sustancia que se consume durante la reacción.</label><br>
+                        <input type="radio" id="quimica5-d" name="quimica5" value="D">
+                        <label for="quimica5-d">Una sustancia que no tiene efecto sobre la velocidad de reacción.</label>
                     </div>
                 </div>
-                <button type="button" class="submit-btn" onclick="calcularNota('form-quimica-teoria-atomica', 5)">Calcular Nota</button>
-                <div class="result" id="result-quimica-teoria-atomica"></div>
+                <!-- Más preguntas para el área de quimica-dinamica aquí -->
             </form>
+            <button type="button" class="submit-btn" onclick="calcularNota('form-quimica-dinamica', 5)">Obtener Nota</button>
+            <div class="result" id="result-quimica-dinamica"></div>
+            <div class="attempt-info" id="attempt-info-quimica-dinamica"></div>
         </div>
 
-        <!-- Soluciones Químicas (Química) -->
-        <div class="quiz-section" id="quimica-soluciones">
-            <h2>Soluciones Químicas (Química)</h2>
-            <form id="form-quimica-soluciones">
-                <div class="question">
-                    <p>1. ¿Qué es una solución en química?</p>
-                    <div class="answer">
-                        <input type="radio" name="q1" value="A"> A) Una mezcla homogénea de dos o más sustancias<br>
-                        <input type="radio" name="q1" value="B"> B) Una mezcla heterogénea de sólidos<br>
-                        <input type="radio" name="q1" value="C"> C) Un líquido puro sin soluto<br>
-                        <input type="radio" name="q1" value="D"> D) Un sólido disuelto en otro sólido<br>
-                    </div>
-                </div>
-                <div class="question">
-                    <p>2. ¿Cómo se mide la concentración de una solución?</p>
-                    <div class="answer">
-                        <input type="radio" name="q2" value="A"> A) En molaridad (M)<br>
-                        <input type="radio" name="q2" value="B"> B) En metros por segundo (m/s)<br>
-                        <input type="radio" name="q2" value="C"> C) En calorías (cal)<br>
-                        <input type="radio" name="q2" value="D"> D) En gramos por litro (g/L)<br>
-                    </div>
-                </div>
-                <div class="question">
-                    <p>3. ¿Qué es una solución saturada?</p>
-                    <div class="answer">
-                        <input type="radio" name="q3" value="A"> A) Una solución en la que no se puede disolver más soluto<br>
-                        <input type="radio" name="q3" value="B"> B) Una solución que contiene más soluto del necesario<br>
-                        <input type="radio" name="q3" value="C"> C) Una solución que contiene solo soluto<br>
-                        <input type="radio" name="q3" value="D"> D) Una solución que no contiene soluto<br>
-                    </div>
-                </div>
-                <div class="question">
-                    <p>4. ¿Cómo se llama el soluto en una solución sólida?</p>
-                    <div class="answer">
-                        <input type="radio" name="q4" value="A"> A) Aleación<br>
-                        <input type="radio" name="q4" value="B"> B) Disolvente<br>
-                        <input type="radio" name="q4" value="C"> C) Solución<br>
-                        <input type="radio" name="q4" value="D"> D) Suspensión<br>
-                    </div>
-                </div>
-                <div class="question">
-                    <p>5. ¿Qué es la ley de Raoult?</p>
-                    <div class="answer">
-                        <input type="radio" name="q5" value="A"> A) La presión de vapor de una solución es proporcional a la fracción molar del soluto<br>
-                        <input type="radio" name="q5" value="B"> B) La presión de vapor de una solución es inversamente proporcional a la fracción molar del soluto<br>
-                        <input type="radio" name="q5" value="C"> C) La presión de vapor de una solución no depende del soluto<br>
-                        <input type="radio" name="q5" value="D"> D) La presión de vapor es constante en todas las soluciones<br>
-                    </div>
-                </div>
-                <button type="button" class="submit-btn" onclick="calcularNota('form-quimica-soluciones', 5)">Calcular Nota</button>
-                <div class="result" id="result-quimica-soluciones"></div>
-            </form>
-        </div>
     </div>
 
-   <script>
-        const maxAttempts = 3;
-        const attemptCounts = {};
-
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        function setupQuiz(formId) {
-            const form = document.getElementById(formId);
-            const questions = Array.from(form.querySelectorAll('.question'));
-            const shuffledQuestions = shuffleArray(questions.slice());
-
-            shuffledQuestions.forEach((question, index) => {
-                form.appendChild(question);
-            });
-        }
-
-        function checkAttempts(formId) {
-            if (!attemptCounts[formId]) {
-                attemptCounts[formId] = 0;
-            }
-
-            if (attemptCounts[formId] >= maxAttempts) {
-                document.getElementById(`attempt-info-${formId}`).innerText = 'Has alcanzado el límite de intentos.';
-                return false;
-            }
-
-            return true;
-        }
-
-        function calcularNota(formId, totalPreguntas) {
-            if (!checkAttempts(formId)) return;
-
-            attemptCounts[formId] = (attemptCounts[formId] || 0) + 1;
-
-            const form = document.getElementById(formId);
-            const respuestas = form.querySelectorAll('input[type="radio"]:checked');
-            const correctas = {
-                'form-fisica-movimiento': ['A', 'A', 'A', 'A', 'D'],
-                'form-fisica-estatica-dinamica': ['A', 'A', 'A', 'A', 'A'],
-                'form-fisica-termodinamica': ['A', 'A', 'A', 'A', 'A'],
-                'form-geologia-historia-tierra': ['A', 'A', 'A', 'A', 'A'],
-                'form-quimica-teoria-atomica': ['A', 'A', 'A', 'A', 'A'],
-                'form-quimica-soluciones': ['A', 'A', 'A', 'A', 'A']
+    <script>
+        function calcularNota(formId, numQuestions) {
+            var form = document.getElementById(formId);
+            var answers = form.querySelectorAll('input[type="radio"]:checked');
+            var correctAnswers = {
+                'fisica-estatica-dinamica': ['A', 'A', 'A', 'A', 'A'],
+                'fisica-termodinamica': ['A', 'A', 'A', 'A', 'A'],
+                'geologia-historia-tierra': ['A', 'A', 'A', 'A', 'A'],
+                'quimica-dinamica': ['A', 'A', 'A', 'A', 'A']
             };
+            var totalQuestions = numQuestions;
+            var correctAnswersList = correctAnswers[formId];
+            var score = 0;
 
-            let score = 0;
-
-            respuestas.forEach(respuesta => {
-                const nombrePregunta = respuesta.name;
-                const respuestaUsuario = respuesta.value;
-                const preguntaIndex = parseInt(nombrePregunta.replace('q', '')) - 1;
-
-                if (correctas[formId][preguntaIndex] === respuestaUsuario) {
+            answers.forEach(function(answer) {
+                var questionIndex = Array.from(answer.closest('form').querySelectorAll('.question')).indexOf(answer.closest('.question'));
+                var selectedAnswer = answer.value;
+                if (selectedAnswer === correctAnswersList[questionIndex]) {
                     score += 0.5;
                 }
             });
 
-            const resultadoDiv = document.getElementById(`result-${formId}`);
-            resultadoDiv.innerHTML = `Nota: ${score.toFixed(1)} / ${totalPreguntas * 0.5}`;
-            const attemptInfoDiv = document.getElementById(`attempt-info-${formId}`);
-            attemptInfoDiv.innerText = `Intentos restantes: ${maxAttempts - attemptCounts[formId]}`;
-        }
+            var resultDiv = document.getElementById('result-' + formId);
+            resultDiv.innerHTML = 'Tu nota es: ' + score.toFixed(1) + ' de ' + totalQuestions * 0.5;
 
-        document.addEventListener('DOMContentLoaded', () => {
-            setupQuiz('form-fisica-movimiento');
-            setupQuiz('form-fisica-estatica-dinamica');
-            setupQuiz('form-fisica-termodinamica');
-            setupQuiz('form-geologia-historia-tierra');
-            setupQuiz('form-quimica-teoria-atomica');
-            setupQuiz('form-quimica-soluciones');
-        });
+            var attemptInfoDiv = document.getElementById('attempt-info-' + formId);
+            attemptInfoDiv.innerHTML = 'Has intentado este cuestionario ' + (parseInt(attemptInfoDiv.getAttribute('data-attempts')) || 0) + ' veces.';
+            attemptInfoDiv.setAttribute('data-attempts', (parseInt(attemptInfoDiv.getAttribute('data-attempts')) || 0) + 1);
+        }
     </script>
+
 </body>
 </html>

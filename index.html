@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIENCIA</title>
+    <title>Habilitación Laboral</title>
     <style>
         body {
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
         }
         header {
             margin: 20px 0;
@@ -28,7 +33,7 @@
             padding: 10px 20px;
             text-decoration: none;
             font-size: 1.2em;
-            margin-top: 20px;
+            margin: 10px;
             display: inline-block;
             border-radius: 5px;
             transition: background-color 0.3s ease;
@@ -37,22 +42,63 @@
             background-color: #0ff;
         }
         footer {
-            margin-top: 50px;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+        .corner-image {
+            position: absolute;
+            width: 100px;
+        }
+        .top-left {
+            top: 0;
+            left: 0;
+        }
+        .top-right {
+            top: 0;
+            right: 0;
+        }
+        .bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+        .bottom-right {
+            bottom: 0;
+            right: 0;
+        }
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4em;
+            color: neon;
+            text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 75px #0ff;
+        }
+        .action-buttons {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://i.postimg.cc/2Sy1qBTg/logo70056.gif" alt="Logo" class="icon">
-        <h1>Laboratorio</h1>
+        <h1>HABILITACIÓN LABORAL</h1>
     </header>
-    <main>
-        <a href="#ciencia" class="button">Laboratorio</a>
-    </main>
+    <img src="https://i.postimg.cc/2Sy1qBTg/logo70056.gif" alt="Logo" class="corner-image top-left">
+    <img src="https://i.postimg.cc/2Sy1qBTg/logo70056.gif" alt="Logo" class="corner-image top-right">
+    <img src="https://postimg.cc/Vrxg35tX" alt="Imagen" class="corner-image bottom-left">
+    <img src="https://postimg.cc/Vrxg35tX" alt="Imagen" class="corner-image bottom-right">
+    <div class="center-text">CIENCIA</div>
+    <div class="action-buttons">
+        <a href="#fisica" class="button">FISICA</a>
+        <a href="#quimica" class="button">QUIMICA</a>
+        <a href="#biologia" class="button">BIOLOGIA</a>
+    </div>
     <footer>
         <p>Derechos reservados Prof. Alberto Sanchez</p>
-        <img src="https://i.postimg.cc/Vrxg35tX/image.png" alt="Imagen de Ciencia y Tecnología">
     </footer>
 </body>
 </html>
-

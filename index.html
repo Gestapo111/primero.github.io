@@ -8,34 +8,34 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
         }
         .container {
             width: 80%;
-            margin: 0 auto;
-            padding: 20px;
+            margin: auto;
+            overflow: hidden;
         }
-        h1 {
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .quiz-section {
+            margin: 20px 0;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
             text-align: center;
             color: #333;
         }
-        .quiz-section {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
         .question {
-            margin-bottom: 10px;
-        }
-        .question p {
-            margin: 0;
-            font-weight: bold;
-        }
-        .answer {
-            margin-left: 20px;
+            margin-bottom: 15px;
         }
         .answer input {
             margin-right: 10px;
@@ -44,7 +44,7 @@
             display: block;
             width: 100%;
             padding: 10px;
-            background-color: #28a745;
+            background: #333;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -52,17 +52,21 @@
             font-size: 16px;
         }
         .submit-btn:hover {
-            background-color: #218838;
+            background: #555;
         }
         .result {
-            margin-top: 20px;
-            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .attempt-info {
+            margin-top: 10px;
+            color: red;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Cuestionarios de Ciencias</h1>
 
         <!-- El Estudio de las Ciencias Naturales -->

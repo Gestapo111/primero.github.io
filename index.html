@@ -52,6 +52,15 @@
             font-weight: bold;
             text-align: center;
         }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .not-answered {
+            color: grey;
+        }
     </style>
     <script>
         function calculateScore() {
@@ -70,11 +79,23 @@
             const totalQuestions = 40;
             const pointsPerQuestion = 0.25;
             const form = document.getElementById('quizForm');
+            let resultOutput = '';
 
             for (let i = 1; i <= totalQuestions; i++) {
-                const selectedAnswer = form.querySelector(`input[name="q${i}"]:checked`);
-                if (selectedAnswer && selectedAnswer.value === answers[`q${i}`]) {
-                    score += pointsPerQuestion;
+                const questionId = `q${i}`;
+                const selectedAnswer = form.querySelector(`input[name="${questionId}"]:checked`);
+                const correctAnswer = answers[questionId];
+
+                if (selectedAnswer) {
+                    const answerValue = selectedAnswer.value;
+                    if (answerValue === correctAnswer) {
+                        score += pointsPerQuestion;
+                        resultOutput += `<p>Pregunta ${i}: <span class="correct">Correcta</span></p>`;
+                    } else {
+                        resultOutput += `<p>Pregunta ${i}: <span class="incorrect">Incorrecta</span></p>`;
+                    }
+                } else {
+                    resultOutput += `<p>Pregunta ${i}: <span class="not-answered">No respondida</span></p>`;
                 }
             }
 
@@ -83,6 +104,7 @@
 
             document.getElementById('score').innerHTML = `
                 <p>Tu nota obtenida es: ${score.toFixed(2)} de ${totalPoints} (${percentage.toFixed(2)}%)</p>
+                ${resultOutput}
             `;
         }
     </script>

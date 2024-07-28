@@ -52,33 +52,76 @@
             font-weight: bold;
             text-align: center;
         }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .not-answered {
+            color: grey;
+        }
     </style>
     <script>
-        function calcularNota() {
-            // Definir las respuestas correctas
-            const respuestasCorrectas = {
-                "q1": "a", "q2": "a", "q3": "a", "q4": "a", "q5": "a",
-                "q6": "a", "q7": "a", "q8": "a", "q9": "a", "q10": "a",
-                "q11": "a", "q12": "a", "q13": "a", "q14": "a", "q15": "a",
-                "q16": "a", "q17": "a", "q18": "a", "q19": "a", "q20": "a",
-                "q21": "a", "q22": "a", "q23": "a", "q24": "a", "q25": "a",
-                "q26": "a", "q27": "a", "q28": "a", "q29": "a", "q30": "a",
-                "q31": "a", "q32": "a", "q33": "a", "q34": "a", "q35": "a",
-                "q36": "a", "q37": "a", "q38": "a", "q39": "a", "q40": "a"
+        function calculateScore() {
+            // Obtener el número de intentos del almacenamiento local
+            let attempts = parseInt(localStorage.getItem('quizAttempts')) || 0;
+
+            // Verificar el límite de intentos
+            if (attempts >= 2) {
+                document.getElementById('message').innerText = 'Has alcanzado el máximo número de intentos permitidos.';
+                document.getElementById('score').innerHTML = '';
+                return;
+            }
+
+            // Incrementar el número de intentos y guardarlo en el almacenamiento local
+            localStorage.setItem('quizAttempts', attempts + 1);
+
+            const answers = {
+                q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a',
+                q6: 'a', q7: 'a', q8: 'a', q9: 'a', q10: 'a',
+                q11: 'a', q12: 'a', q13: 'a', q14: 'a', q15: 'a',
+                q16: 'a', q17: 'a', q18: 'a', q19: 'a', q20: 'a',
+                q21: 'a', q22: 'a', q23: 'a', q24: 'a', q25: 'a',
+                q26: 'a', q27: 'a', q28: 'a', q29: 'a', q30: 'a',
+                q31: 'a', q32: 'a', q33: 'a', q34: 'a', q35: 'a',
+                q36: 'a', q37: 'a', q38: 'a', q39: 'a', q40: 'a'
             };
 
-            let puntos = 0;
-            // Recorre las preguntas y verifica las respuestas
+            let score = 0;
+            let output = '';
+            const form = document.getElementById('quizForm');
+
             for (let i = 1; i <= 40; i++) {
-                const respuestaSeleccionada = document.querySelector(`input[name="q${i}"]:checked`);
-                if (respuestaSeleccionada && respuestaSeleccionada.value === respuestasCorrectas[`q${i}`]) {
-                    puntos += 0.25; // Cada respuesta correcta vale 0.25 puntos
+                const questionId = `q${i}`;
+                const selectedAnswer = form.querySelector(`input[name="${questionId}"]:checked`);
+
+                if (selectedAnswer) {
+                    const answer = selectedAnswer.value;
+                    if (answers[questionId] === answer) {
+                        score += 0.25;
+                        output += `<p>Pregunta ${i}: <span class="correct">Correcta</span></p>`;
+                    } else {
+                        output += `<p>Pregunta ${i}: <span class="incorrect">Incorrecta</span></p>`;
+                    }
+                } else {
+                    output += `<p>Pregunta ${i}: <span class="not-answered">No respondida</span></p>`;
                 }
             }
-            // Calcula la nota en porcentaje
-            const nota = (puntos / 10) * 100;
-            // Muestra la nota en el div de resultado
-            document.getElementById('resultado').innerText = `Tu nota es: ${nota.toFixed(2)}%`;
+
+            const totalQuestions = 40;
+            const totalPoints = totalQuestions * 0.25;
+
+            document.getElementById('score').innerHTML = `
+                <p>Tu nota obtenida es: ${score.toFixed(2)} de ${totalPoints} (${(score / totalPoints * 100).toFixed(2)}%)</p>
+                ${output}
+            `;
+            document.getElementById('message').innerText = '';
+        }
+
+        // Inicializar el número de intentos en el almacenamiento local si no existe
+        if (localStorage.getItem('quizAttempts') === null) {
+            localStorage.setItem('quizAttempts', 0);
         }
     </script>
 <body>

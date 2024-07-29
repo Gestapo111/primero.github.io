@@ -27,25 +27,31 @@ h1 {
 }
 .question:hover {
     background-color: #333; /* Cambio de fondo al pasar el ratón */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Mayor sombra al pasar el ratón */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Aumentar sombra al pasar el ratón */
+}
+label {
+    display: block;
+    font-weight: bold;
+}
+input[type="radio"] {
+    margin-right: 10px;
 }
 input[type="button"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 20px 0;
-    background-color: #4CAF50; /* Botón verde */
-    color: #fff; /* Texto blanco */
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transición suave para el color de fondo */
-}
-input[type="button"]:hover {
-    background-color: #45a049; /* Cambio de color al pasar el ratón */
+    border-radius: 5px;
 }
 .result {
+    margin-top: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
 }

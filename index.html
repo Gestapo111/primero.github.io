@@ -80,7 +80,12 @@
     <div id="particles-js"></div>
     <div class="content">
         <h1>Evaluaciones Primer Año, Ciencia y Tecnología</h1>
-        <div class="button-container">
+        <div id="auth-container">
+            <input type="text" id="nie-input" placeholder="Ingrese su NIE" />
+            <button id="auth-button">Acceder</button>
+            <p id="auth-message"></p>
+        </div>
+        <div class="button-container" id="button-container" style="display: none;">
             <button onclick="location.href='https://gestapo111.github.io/prim1.github.io/'">El Estudio de las Ciencias Naturales</button>
             <button onclick="location.href='https://gestapo111.github.io/prim02.github.io/'">El Movimiento (Física)</button>
             <button onclick="location.href='https://gestapo111.github.io/prim03.github.io/'">Estática y Dinámica (Física)</button>
@@ -101,6 +106,28 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script>
+        // NIE Authorization
+        const authorizedNIEs = [
+            "4839280", "19711634", "4839293", "6297544", "19711644", "3850927", 
+            "19711635", "4267835", "3299386", "19711278", "19711637", "4267839", 
+            "19806177", "4839298", "4267832", "4267843", "6297485", "4839279", 
+            "4839301", "19964688"
+        ];
+
+        document.getElementById('auth-button').addEventListener('click', function() {
+            const nieInput = document.getElementById('nie-input').value.trim();
+            const messageElement = document.getElementById('auth-message');
+            if (authorizedNIEs.includes(nieInput)) {
+                document.getElementById('auth-container').style.display = 'none';
+                document.getElementById('button-container').style.display = 'flex';
+                messageElement.textContent = '';
+            } else {
+                messageElement.textContent = 'NIE no autorizado. Inténtelo de nuevo.';
+                messageElement.style.color = 'red';
+            }
+        });
+
+        // Particles.js configuration
         particlesJS('particles-js', {
             "particles": {
                 "number": {
